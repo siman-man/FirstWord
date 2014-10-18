@@ -28,14 +28,16 @@ ActiveRecord::Schema.define(version: 20141018114618) do
 
   create_table "questions", force: true do |t|
     t.string   "text"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "questions", ["category"], name: "index_questions_on_category", using: :btree
+
   create_table "words", force: true do |t|
-    t.string   "text"
-    t.integer  "category"
-    t.text     "description", null: false
+    t.text     "text"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

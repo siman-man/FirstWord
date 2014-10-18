@@ -1,17 +1,14 @@
 <div class="starter-template">
   <div class="about">
     <h3>あなたに贈る言葉</h3>
-    <p>FirstWordは話かけるときに最初の一言を後押しするサービスです</p>
+    <p>FirstWordは話かけるときの最初の一言を提案するサービスです</p>
   </div>
 
   <div class="btn-group">
     <p class="text-center">
-      <%= link_to("試す", select_path(select: { parameter: '' }), class: 'btn btn-lg btn-default', id: "start_button") %>
+      <%= link_to("作る", select_path, class: 'btn btn-lg btn-default', id: "start_button") %>
     </p>
   </div>
-
-  <p id='show_width'><p>
-  <p id='show_height'><p>
 </div>
 
 <%= javascript_include_tag "static_pages" %>

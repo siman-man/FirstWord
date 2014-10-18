@@ -2,24 +2,28 @@
   <%= content_tag(:p, link_to(answers.first.text, 
       select_path(data: { 
         keywords: @keywords + [answers.first.text],
+        excludes: @excludes,
         number: @question_number
       }), class: "btn btn-outlined btn-success animsition-link")) %>
 
   <%= content_tag(:p, link_to(answers.second.text,
       select_path(data: { 
         keywords: @keywords + [answers.second.text],
+        excludes: @excludes,
         number: @question_number
       }), class: "btn btn-outlined btn-primary animsition-link")) %>
 
   <%= content_tag(:p, link_to(answers.third.text,
       select_path(data: { 
         keywords: @keywords + [answers.third.text],
+        excludes: @excludes,
         number: @question_number
       }), class: "btn btn-outlined btn-warning animsition-link")) %>
 
   <%= content_tag(:p, link_to(answers.fourth.text,
       select_path(data: { 
         keywords: @keywords + [answers.fourth.text],
+        excludes: @excludes,
         number: @question_number
       }), class: "btn btn-outlined btn-danger animsition-link")) %>
 </div>

@@ -1,2 +1,11 @@
-<p>あなたが選択したキーワードは</p>
-<%= @keywords.join(' ') %>
+<div class="starter-template">
+  <h3>あなたへ贈る言葉は</h3>
+
+  <div class="btn-group">
+    <% @sentences.each do |sentence| %>
+      <p class="sentence">「<%= sentence %>」</p>
+    <% end %>
+  </div>
+
+  <h3>です</h3>
+</div>

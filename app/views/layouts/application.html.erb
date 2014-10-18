@@ -21,8 +21,8 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <%= content_tag(:li, link_to("About", root_path)) %>
-          <%= content_tag(:li, link_to("Contact", root_path)) %>
+          <%= content_tag(:li, link_to(sanitize('<span class="glyphicon glyphicon-search"> About</span>'), about_path)) %>
+          <%= content_tag(:li, link_to(sanitize('<span class="glyphicon glyphicon-user"> Contact</span>'), contact_path)) %>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
