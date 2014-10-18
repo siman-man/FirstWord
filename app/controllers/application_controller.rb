@@ -9,10 +9,22 @@ class ApplicationController < ActionController::Base
   end
 
   def create_sentence(keywords, question_ids)
-    words = Word.all.sample(3)
+    categories = qids2category(question_ids.map(&:to_i))
 
-    words.zip(keywords).map do |word, keyword|
-      word.text.gsub('**', keyword)
+    p categories
+
+    categories.zip(keywords).map do |category, keyword|
+      pick_word(category).gsub('**', keyword)
     end
+  end
+
+  def pick_word(category)
+    Word.where(category: category).sample.text
+  end
+
+  def qids2category(ids)
+    result = Question.where(id: ids)
+
+    ids.map{|id| result.find{|e| e.id == id}.category }
   end
 end

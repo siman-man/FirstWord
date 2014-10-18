@@ -92,6 +92,14 @@ $border-size: 0.1em;
 }
 
 // result.html
+#retry_button {
+  width: 7em;
+  height: 4em;
+  font-size: 1.2em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .sentence {
   text-align: center;
   font-size: 1.1em;
