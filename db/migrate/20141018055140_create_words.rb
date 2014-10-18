@@ -3,9 +3,11 @@ class CreateWords < ActiveRecord::Migration
     create_table :words do |t|
       t.string :text
       t.integer :category
-      t.text :description
+      t.text :description, null: false, unique: true
 
       t.timestamps
     end
+    
+    add_index :words, :category
   end
 end

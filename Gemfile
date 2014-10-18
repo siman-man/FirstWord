@@ -26,6 +26,9 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# pry-rails
+gem 'pry-rails'
+
 group :development, :test do
   gem 'sqlite3', '1.3.9'
   gem 'rspec-rails'

@@ -1,6 +1,25 @@
-<div class="button_group">
-  <%= content_tag(:p, link_to("デモ", select_path, class: "btn btn-outlined btn-primary animsition-link")) %>
-  <%= content_tag(:p, link_to("次へ", select_path, class: "btn btn-outlined btn-success animsition-link")) %>
-  <%= content_tag(:p, link_to("デモ", select_path, class: "btn btn-outlined btn-info animsition-link")) %>
-  <%= content_tag(:p, link_to("デモ", select_path, class: "btn btn-outlined btn-danger animsition-link")) %>
+<div class="btn-group">
+  <%= content_tag(:p, link_to(answers.first.text, 
+      select_path(data: { 
+        keywords: @keywords + [answers.first.text],
+        number: @question_number
+      }), class: "btn btn-outlined btn-success animsition-link")) %>
+
+  <%= content_tag(:p, link_to(answers.second.text,
+      select_path(data: { 
+        keywords: @keywords + [answers.second.text],
+        number: @question_number
+      }), class: "btn btn-outlined btn-primary animsition-link")) %>
+
+  <%= content_tag(:p, link_to(answers.third.text,
+      select_path(data: { 
+        keywords: @keywords + [answers.third.text],
+        number: @question_number
+      }), class: "btn btn-outlined btn-warning animsition-link")) %>
+
+  <%= content_tag(:p, link_to(answers.fourth.text,
+      select_path(data: { 
+        keywords: @keywords + [answers.fourth.text],
+        number: @question_number
+      }), class: "btn btn-outlined btn-danger animsition-link")) %>
 </div>

@@ -1,29 +1,17 @@
 <div class="starter-template">
-  <h3>あなたに贈る最初の言葉</h3>
-  <p>FirstWordは話かけるときに最初の一言を後押しするサービスです</p>
+  <div class="about">
+    <h3>あなたに贈る言葉</h3>
+    <p>FirstWordは話かけるときに最初の一言を後押しするサービスです</p>
+  </div>
 
   <div class="btn-group">
     <p class="text-center">
       <%= link_to("試す", select_path(select: { parameter: '' }), class: 'btn btn-lg btn-default', id: "start_button") %>
     </p>
   </div>
-  
+
   <p id='show_width'><p>
   <p id='show_height'><p>
 </div>
 
-<script>
-$(function() {
-    var w = $(window).width();
-    var h = $(window).height();
-    $("#show_width").text('width: ' + w);
-    $("#show_height").text('height: ' + h);
-
-    $("#start_button").css({
-      width: w/4 + "px",
-      height: h/4 + "px",
-      display: "table-cell",
-      "vertical-align": "middle"
-    });
-});
-</script>
+<%= javascript_include_tag "static_pages" %>

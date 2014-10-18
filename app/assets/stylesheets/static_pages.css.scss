@@ -2,20 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$button-width: 200px;
-$button-height: 70px;
+$button-width: 12em;
+$button-height: 5em;
+$border-size: 0.1em;
 
+// index.html.erb
+#start_button {
+  width: 10em;
+  height: 5em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.about {
+  margin: 2em;
+}
+
+// select.html.erb
 .btn-outlined {
   border-radius: 0;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
+  font-size: 1.0em;
+  display: table-cell;
   width: $button-width;
   height: $button-height;
 
   &.btn-primary {
     background: none;
-    border: 3px solid #428bca;
+    border: $border-size solid #428bca;
     color: #428bca;
 
     &:hover, &:active {
@@ -24,49 +40,49 @@ $button-height: 70px;
       border-color: #428bca;
     }
   }
-}
 
-.btn-outlined.btn-success {
+  &.btn-success {
     background: none;
-    border: 3px solid #5cb85c;
-    color: #5cb85c;
-}
-.btn-outlined.btn-success:hover,
-.btn-outlined.btn-success:active {
-    color: #FFF;
-    background: #47a447;
-}
- 
-.btn-outlined.btn-info {
+    border: $border-size solid #5cb85c;
+    color: #5cb85c; 
+
+    &:hover, &:active {
+      color: #FFF;
+      background: #47a447;
+    }
+  }
+
+  &.btn-info {
     background: none;
-    border: 3px solid #5bc0de;
+    border: $border-size solid #5bc0de;
     color: #5bc0de;
-}
-.btn-outlined.btn-info:hover,
-.btn-outlined.btn-info:active {
-    color: #FFF;
-    background: #39b3d7;
-}
- 
-.btn-outlined.btn-warning {
-    background: none;
-    border: 3px solid #f0ad4e;
-    color: #f0ad4e;
-}
-.btn-outlined.btn-warning:hover,
-.btn-outlined.btn-warning:active {
-    color: #FFF;
-    background: #ed9c28;
-}
- 
-.btn-outlined.btn-danger {
-    background: none;
-    border: 3px solid #d9534f;
-    color: #d9534f;
-}
 
-.btn-outlined.btn-danger:hover,
-.btn-outlined.btn-danger:active {
-    color: #FFF;
-    background: #d2322d;
+    &:hover, &:active {
+      color: #FFF;
+      background: #39b3d7;
+    }    
+  }
+
+  &.btn-warning {
+    background: none;
+    border: $border-size solid #f0ad4e;
+    color: #f0ad4e;
+
+    &:hover, &:active {
+      color: #FFF;
+      background: #ed9c28;
+    }
+  }
+
+  &.btn-danger {
+    background: none;
+    border: $border-size solid #d9534f;
+    color: #d9534f;
+
+    &:hover, &:active {
+      color: #FFF;
+      background: #d2322d;
+    }
+  }
 }
+ 
