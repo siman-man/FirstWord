@@ -1,2 +1,29 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<div class="starter-template">
+  <h3>あなたに贈る最初の言葉</h3>
+  <p>FirstWordは話かけるときに最初の一言を後押しするサービスです</p>
+
+  <div class="btn-group">
+    <p class="text-center">
+      <%= link_to("試す", select_path(select: { parameter: '' }), class: 'btn btn-lg btn-default', id: "start_button") %>
+    </p>
+  </div>
+  
+  <p id='show_width'><p>
+  <p id='show_height'><p>
+</div>
+
+<script>
+$(function() {
+    var w = $(window).width();
+    var h = $(window).height();
+    $("#show_width").text('width: ' + w);
+    $("#show_height").text('height: ' + h);
+
+    $("#start_button").css({
+      width: w/4 + "px",
+      height: h/4 + "px",
+      display: "table-cell",
+      "vertical-align": "middle"
+    });
+});
+</script>
