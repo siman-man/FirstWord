@@ -77,7 +77,7 @@ Answer.create( question_id: q9.id, order: 4, text: 'ファーストフード' )
 q10 = Question.create( text: '行ってみたい所は', category: 'place')
 Answer.create( question_id: q10.id, order: 1, text: '海が綺麗な所' )
 Answer.create( question_id: q10.id, order: 2, text: '寒い所' )
-Answer.create( question_id: q10.id, order: 3, text: '熱い所' )
+Answer.create( question_id: q10.id, order: 3, text: '暑い所' )
 Answer.create( question_id: q10.id, order: 4, text: '砂漠' )
 
 
